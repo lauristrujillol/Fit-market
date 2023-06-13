@@ -1,10 +1,13 @@
+
 const Clickbutton = document.querySelectorAll('.button')
 const tbody = document.querySelector('.tbody')
 let carrito = []
 
 Clickbutton.forEach(btn => {
    btn.addEventListener('click', addToCarritoItem) 
+   
 })
+
 
 function addToCarritoItem(e){
     const button = e.target
@@ -102,7 +105,6 @@ function removeItemCarrito(e){
 
         if(carrito[i].title.trim() === title.trim()){
             carrito.splice(i, 1)
-            console.log('Hola mundo');
         }
     }
 
@@ -143,3 +145,17 @@ function sumaCantidad(e){
         renderCarrito()
     }
   }
+
+  const comprarAhora = document.getElementById("comprarAhora");
+
+comprarAhora.addEventListener("click", () => {
+    Swal.fire({
+        title: "¡Tu compra se esta procesando con éxito!",
+        text: "A tu correo llegará la confirmación de tu pedido.",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+
+    })
+})
+
+

@@ -6,6 +6,8 @@ header, .alert{
   z-index: 10;
 }
 
+
+
 .description{
     height: 25px;
     overflow: hidden;
@@ -45,4 +47,5 @@ header, .alert{
 .hide, .remove{
   display: none;
 }
+
 
